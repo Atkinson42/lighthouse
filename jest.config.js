@@ -7,13 +7,15 @@
 
 module.exports = {
   collectCoverage: false,
-  coverageReporters: ['none'],
+  coverageReporters: ['json', 'html', 'text-summary'],
   collectCoverageFrom: [
     '**/lighthouse-core/**/*.js',
     '**/lighthouse-cli/**/*.js',
+    '**/lighthouse-viewer/**/*.js',
     '!**/test/',
     '!**/scripts/',
   ],
+  coverageDirectory: './coverage/',
   setupFilesAfterEnv: ['./lighthouse-core/test/test-utils.js'],
   testEnvironment: 'node',
   testMatch: [
